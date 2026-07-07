@@ -1,1 +1,41 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <title>NSE Dashboard V2</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <h1>NSE Dashboard V2</h1>
+        <p id="subtitle">Loading latest scanner output...</p>
+      </div>
+      <button id="refresh-prices" class="primary" type="button">Refresh Prices</button>
+    </header>
+    <main>
+      <section class="status-grid" aria-live="polite">
+        <div class="metric"><span>Scan Time</span><strong id="scan-time">--</strong></div>
+        <div class="metric"><span>Last Updated</span><strong id="last-updated">--</strong></div>
+        <div class="metric"><span>Tracked Symbols</span><strong id="tracked-count">--</strong></div>
+        <div class="metric"><span>Price Source</span><strong id="price-source">Cloudflare Worker</strong></div>
+      </section>
+      <div id="error" class="error" hidden></div>
+      <nav class="tabs" aria-label="Dashboard sections">
+        <button class="tab active" data-tab="long">Long Setups</button>
+        <button class="tab" data-tab="blast">Blast Exits</button>
+        <button class="tab" data-tab="watchlist">Watchlist</button>
+        <button class="tab" data-tab="shorts">Short Signals</button>
+        <button class="tab" data-tab="positions">Active Positions</button>
+      </nav>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
