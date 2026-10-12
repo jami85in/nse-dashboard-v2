@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-11",
-  "market_open": false,
-  "reason": "Weekend",
-  "checked_at": "2026-10-11 21:50 IST"
+  "date": "2026-10-12",
+  "market_open": true,
+  "reason": "Market open \u2014 scan deferred until candle settles at 15:30 IST",
+  "checked_at": "2026-10-13 01:18 IST"
 }
